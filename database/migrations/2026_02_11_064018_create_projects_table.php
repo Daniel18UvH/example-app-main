@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->string('name'); // Nombre del proyecto
-            $table->text('description')->nullable(); // Descripción opcional
+            $table->string('name'); 
+            $table->text('description')->nullable(); 
             // Estado del proyecto para las estadísticas del empleado
             $table->enum('status', ['En proceso', 'Finalizado'])->default('En proceso');
             // Relación con la tabla de empleados que ya tienes
